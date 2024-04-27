@@ -64,14 +64,13 @@ nav{
 }
 
 main{
-    width: 100%;
-    height: calc(100vh - 76px);
+    width: 100vw;
+    height: 100vh;
 }
 
 .main-content{
     display: flex;
     width: 100%;
-    height: 100%;
 }
 
 .main{
@@ -91,19 +90,16 @@ main{
     padding-top: 25px;
     p{
         font-size: 20px;
+        text-wrap: nowrap;
     }
 }
 
-.image{
+.main-image{
     align-self: flex-start;
-    background: url(../images/Ride-with-Uber.webp) no-repeat;
-    background-size: cover;
-    background-position: center;
     border-radius: 10px;
-    height: 100vh;
     width: 40%;
     margin-right: 100px;
-    margin-top: 30px;
+    padding: 50px;
 }
 
 .form{
@@ -119,4 +115,66 @@ main{
         border: 1px solid black;
         border-radius: 10px;
     }
+}
+
+.info{
+    display: flex;
+    height: max-content;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: $secondary-background-color;
+    *{
+        color: $secondary-color;
+    }
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+    text-wrap: pretty;
+    h1{
+        font-size: 50px;
+    }
+    p{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+        
+    }
+}
+
+.info-image{
+    width: 45%;
+    margin: 50px;
+}
+.already-have-account{
+    font-size: 16px;
+    text-decoration: underline rgba(141, 141, 141, 1);
+    text-underline-offset: 7px;
+    transition: .2s;
+    &:hover{
+        text-decoration-color: black;
+    }
+}
+.get-started-button{
+    align-self: flex-start;
+    background-color: $secondary-color;
+    color: $primary-color;
+    padding: 15px;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 30px;
+    cursor: pointer;
 }
